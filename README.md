@@ -1,2 +1,1 @@
-# sql-pbi-project
-Winter SQL/PBI project
+# Winter SQL/PBI project
