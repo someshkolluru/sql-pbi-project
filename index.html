@@ -1,102 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer & Product Analysis using SQL and Power BI | Somesh Kolluru</title>
-    <style>
-        /* General Reset */
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Questions: SQL and Power BI</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Header Section */
-        header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 20px 10%;
-            text-align: center;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
 
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2rem;
-        }
+    .toggle-buttons {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+    }
 
-        /* Content Section */
-        section {
-            padding: 20px 10%;
-            margin-bottom: 20px;
-            background: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+    .toggle-buttons button {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-        section h2 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
+    .toggle-buttons button.active {
+      background-color: #0056a6;
+    }
 
-        section p {
-            font-size: 1rem;
-            margin: 10px 0;
-        }
+    .section {
+      display: none;
+      padding: 1rem;
+      text-align: center;
+    }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #ecf0f1;
-            font-size: 0.9rem;
-            color: #7f8c8d;
-        }
-    </style>
+    .section.active {
+      display: block;
+    }
+
+    .visual-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    footer {
+      background-color: #0078d7;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .question {
+      margin-bottom: 2rem;
+    }
+
+    .sql-code {
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: left;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Business Insights Dashboard</h1>
-        <p>Your guide to key business questions and actionable insights</p>
-    </header>
+  <header>
+    <h1>Business Questions: SQL and Power BI</h1>
+  </header>
 
-    <!-- Business Question Sections -->
-    <section>
-        <h2>1. Which products should we order more of or less of?</h2>
-        <p>This analysis helps optimize inventory levels to prevent overstocking or running out of stock.</p>
+  <div class="toggle-buttons">
+    <button id="sqlButton" class="active">SQL Responses</button>
+    <button id="pbiButton">PBI Visuals</button>
+  </div>
+
+  <!-- SQL Responses Section -->
+  <section id="sqlSection" class="section active">
+    <h2>SQL Responses to Business Questions</h2>
+
+    <!-- Question 1 -->
+    <div class="question">
+      <h3>1. Which products should we order more of or less of?</h3>
+      <div class="sql-code">
+       <p>This analysis helps optimize inventory levels to prevent overstocking or running out of stock.</p>
         <img src="SQL_PBI_Project-SQL_Q1.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;">
-        <iframe title="SQL PBI Project - Most Valuable Products" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=2ad9dce1-1010-43b8-ad2e-a0706867ea51&autoAuth=true&ctid=9226026a-6a6f-43bb-a208-0601a56c0ed4" frameborder="0" allowFullScreen="true"></iframe>
-        <p><strong>Explanation:</strong> By calculating the low stock ratio and product performance (sales), we prioritize products that need immediate restocking or de-prioritization based on demand and stock levels.</p>
-    </section>
+      </div>
+    </div>
 
-    <section>
-        <h2>2. How should we match marketing and communication strategies to customer behaviors?</h2>
-        <p>Understanding customer behavior helps tailor personalized strategies for retention and engagement.</p>
-        <img src="SQL_PBI_Project-SQL_Q2_v2.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;">
-        <iframe title="SQL PBI Project - Customer Profit" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=0ab465df-5c8b-4a75-8560-fdfc911f0d6f&autoAuth=true&ctid=9226026a-6a6f-43bb-a208-0601a56c0ed4" frameborder="0" allowFullScreen="true"></iframe>
-        <p><strong>Explanation:</strong> Customers are segmented into VIPs and less-engaged groups based on their lifetime value, enabling targeted campaigns for each category.</p>
-    </section>
+    <!-- Question 2 -->
+    <div class="question">
+      <h3>2. What are the monthly sales trends over the past year?</h3>
+      <div class="sql-code">
+        SELECT MONTH(SaleDate) AS Month, SUM(Revenue) AS MonthlyRevenue<br>
+        FROM Sales<br>
+        WHERE SaleDate >= DATEADD(YEAR, -1, GETDATE())<br>
+        GROUP BY MONTH(SaleDate)<br>
+        ORDER BY Month;<br>
+      </div>
+    </div>
 
-    <section>
-        <h2>3. How much can we spend on acquiring new customers?</h2>
-        <p>Customer acquisition cost is determined by evaluating the average customer lifetime value (CLV).</p>
-        <img src="SQL_PBI_Project-SQL_Q3_v2.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;">
-        <iframe title="SQL PBI Project - Customer Lifetime Value" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=35f6715c-ace2-4014-9dac-32b46fe5bf71&autoAuth=true&ctid=9226026a-6a6f-43bb-a208-0601a56c0ed4" frameborder="0" allowFullScreen="true"></iframe>
-        <p><strong>Explanation:</strong> The CLV analysis provides insights into how much budget can be allocated for acquiring new customers while maintaining profitability.</p>
-    </section>
+    <!-- Question 3 -->
+    <div class="question">
+      <h3>3. Which regions contributed the most to sales revenue?</h3>
+      <div class="sql-code">
+        SELECT Region, SUM(Revenue) AS RegionalRevenue<br>
+        FROM Sales<br>
+        GROUP BY Region<br>
+        ORDER BY RegionalRevenue DESC;<br>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-        &copy; Customer & Product Analysis by Somesh Kolluru®. All rights reserved.
-    </footer>
+  <!-- Power BI Visuals Section -->
+  <section id="pbiSection" class="section">
+    <h2>Power BI Visuals for Business Questions</h2>
+
+    <!-- Question 1 -->
+    <div class="question">
+      <h3>1. Products with the Highest Sales Revenue</h3>
+      <div class="visual-container">
+        <iframe src="https://app.powerbi.com/reportEmbed?reportId=2ad9dce1-1010-43b8-ad2e-a0706867ea51&autoAuth=true&ctid=9226026a-6a6f-43bb-a208-0601a56c0ed4" allowfullscreen="true"></iframe>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <h3>2. Monthly Sales Trends</h3>
+      <div class="visual-container">
+        <iframe src="https://app.powerbi.com/view?r=YOUR_REPORT_ID_2" allowfullscreen="true"></iframe>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <h3>3. Regional Sales Contribution</h3>
+      <div class="visual-container">
+        <iframe src="https://app.powerbi.com/view?r=YOUR_REPORT_ID_3" allowfullscreen="true"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle sections
+    const sqlButton = document.getElementById("sqlButton");
+    const pbiButton = document.getElementById("pbiButton");
+    const sqlSection = document.getElementById("sqlSection");
+    const pbiSection = document.getElementById("pbiSection");
+
+    sqlButton.addEventListener("click", () => {
+      sqlButton.classList.add("active");
+      pbiButton.classList.remove("active");
+      sqlSection.classList.add("active");
+      pbiSection.classList.remove("active");
+    });
+
+    pbiButton.addEventListener("click", () => {
+      pbiButton.classList.add("active");
+      sqlButton.classList.remove("active");
+      pbiSection.classList.add("active");
+      sqlSection.classList.remove("active");
+    });
+  </script>
 </body>
 </html>
