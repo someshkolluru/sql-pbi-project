@@ -62,27 +62,6 @@ img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.visual-container {
-    position: relative;
-    width: 100%; /* Full width for any screen */
-    max-width: 1000px; /* Optional: limit the width on larger screens */
-    margin: 0 auto; /* Center on the page */
-}
-
-.powerbi-visual {
-    width: 100%; /* Make the iframe responsive */
-    height: 0;
-    padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio */
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-@media (max-width: 600px) {
-    .visual-container {
-        max-width: 100%; /* Remove width restrictions for small screens */
-    }
 
     .powerbi-visual {
         padding-bottom: 75%; /* Adjust to a taller aspect ratio for readability */
