@@ -65,7 +65,8 @@ img {
 .responsive-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
+  padding-bottom: 56.25%; /* Default Aspect Ratio: 16:9 */
+  height: 0;
   overflow: hidden;
 }
 
@@ -78,14 +79,16 @@ img {
   border: none;
 }
 
-@media (max-width: 768px) {
-  .responsive-container iframe {
-    height: 400px; /* Adjust height for smaller devices */
+/* Adjust Aspect Ratio for Smaller Screens */
+@media (max-width: 768px) { /* For tablets and smaller devices */
+  .responsive-container {
+    padding-bottom: 75%; /* Aspect Ratio: 4:3 */
   }
 }
 
-@media (max-width: 480px) {
-  .responsive-container iframe {
-    height: 300px; /* Further adjustments for very small devices */
+@media (max-width: 480px) { /* For mobile devices */
+  .responsive-container {
+    padding-bottom: 100%; /* Aspect Ratio: 1:1 (Square) */
   }
 }
+
