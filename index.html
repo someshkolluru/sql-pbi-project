@@ -88,14 +88,14 @@
 <body>
   <header>
     <h1>Business Questions answered using SQL and Power BI</h1>
-    <h2> <strong>About the project:</strong> <br> 
-This project explores sales data for an automobile manufacturer, using SQL and Power BI to uncover insights.<br>
-      The analysis answers key business questions, highlights trends, and provides actionable recommendations. </h2>
+    <h2> <strong>About the project:</strong> <be> 
+<h3>This project explores sales data for an automobile manufacturer, using SQL and Power BI to uncover insights.<br>
+      The analysis answers key business questions, highlights trends, and provides actionable recommendations. </h3>
   </header>
 
   <div class="toggle-buttons">
     <button id="sqlButton" class="active">SQL Responses</button>
-    <button id="pbiButton">PBI Visuals (Recommended to be opened on desktop) </button>
+    <button id="pbiButton">PBI Visuals </button>
   </div>
 
   <!-- SQL Responses Section -->
@@ -106,20 +106,20 @@ This project explores sales data for an automobile manufacturer, using SQL and P
     <div class="question">
       <h3>1. Which products should we order more of or less of?</h3>
       <div class="sql-code">
-       <p>This analysis helps optimize inventory levels to prevent overstocking or running out of stock.</p>
+       <p>This analysis helps optimise inventory levels to prevent overstocking or running out of stock.</p>
         <img src="SQL_PBI_Project-SQL_Q1.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;">
       </div>
+      <h4> Insights:<br>
+      1. Is there love?<br>
+      2. For real?</h4>
     </div>
 
     <!-- Question 2 -->
     <div class="question">
       <h3>2. What are the monthly sales trends over the past year?</h3>
       <div class="sql-code">
-        SELECT MONTH(SaleDate) AS Month, SUM(Revenue) AS MonthlyRevenue<br>
-        FROM Sales<br>
-        WHERE SaleDate >= DATEADD(YEAR, -1, GETDATE())<br>
-        GROUP BY MONTH(SaleDate)<br>
-        ORDER BY Month;<br>
+        <p>This analysis gives us the profit generated through each customer across different countries.</p>
+        <img src="SQL_PBI_Project-SQL_Q2.png" alt="Customer Profit" style="width:100%; max-width:1080px; margin: 20px 0;">
       </div>
     </div>
 
@@ -127,10 +127,8 @@ This project explores sales data for an automobile manufacturer, using SQL and P
     <div class="question">
       <h3>3. Which regions contributed the most to sales revenue?</h3>
       <div class="sql-code">
-        SELECT Region, SUM(Revenue) AS RegionalRevenue<br>
-        FROM Sales<br>
-        GROUP BY Region<br>
-        ORDER BY RegionalRevenue DESC;<br>
+        <p>This analysis returns the average customer lifetime value.</p>
+        <img src="SQL_PBI_Project-SQL_Q3.png" alt="Average Customer Lifetime Value" style="width:100%; max-width:1080px; margin: 20px 0;">
       </div>
     </div>
   </section>
@@ -141,7 +139,8 @@ This project explores sales data for an automobile manufacturer, using SQL and P
 
     <!-- Question 1 -->
     <div class="question">
-      <h3>1. Products with the Highest Sales Revenue</h3>
+      <h3>1. Which products should we order more of or less of?</h3>
+      <h4> Here's a distribution of the products based on Low Stock Ratio and Highest Sales Performance. </h4>
       <div class="visual-container">
         <iframe title="SQL PBI Project - Most Valuable Products" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMWYwZjE2MTMtNmE3NS00OTljLThmYTYtNjMyNGJmZjU4NTRkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
       </div>
@@ -149,7 +148,8 @@ This project explores sales data for an automobile manufacturer, using SQL and P
 
     <!-- Question 2 -->
     <div class="question">
-      <h3>2. Monthly Sales Trends</h3>
+      <h3>2. What are the monthly sales trends over the past year?</h3>
+      <h4> Here's a distribution of the products based on Low Stock Ratio and Highest Sales Performance. </h4>
       <div class="visual-container">
         <iframe title="SQL PBI Project - Customer Profit" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDI2MGRkMmItNjlmMC00ZGMwLTgxYWYtOTg3YjIwMzAzYjJkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
       </div>
@@ -157,7 +157,8 @@ This project explores sales data for an automobile manufacturer, using SQL and P
 
     <!-- Question 3 -->
     <div class="question">
-      <h3>3. Regional Sales Contribution</h3>
+      <h3>3. Which regions contributed the most to sales revenue?</h3>
+      <h4> Here's a distribution of the products based on Low Stock Ratio and Highest Sales Performance. </h4>
       <div class="visual-container">
         <iframe title="SQL PBI Project - Customer Lifetime Value" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTc1MzkxY2ItY2ZmNy00OGVhLThmMzctN2I3OWNkNWFiNzJjIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
       </div>
@@ -165,8 +166,8 @@ This project explores sales data for an automobile manufacturer, using SQL and P
   </section>
 
   <footer>
-    <p>&copy;Credit: Dataquest | Guided Project: Customers and Products Analysis Using SQL.<br>
-2025 Business Questions answered using SQL and Power BI by Somesh Kolluru®. All rights reserved.</p>
+    <p>Credit: Dataquest | Guided Project: Customers and Products Analysis Using SQL.<br>
+&copy;2025 Business Questions answered using SQL and Power BI by Somesh Kolluru. All rights reserved.</p>
   </footer>
 
   <script>
