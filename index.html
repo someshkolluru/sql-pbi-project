@@ -118,7 +118,24 @@
             <center><h2>About the project:</h2>
             <ul><p>This project explores sales data for an automobile manufacturer, using SQL and Power BI to uncover insights.<br>
                 The analysis answers key business questions, highlights trends and provides actionable recommendations.<br></ul>
+            
+            <ul>The given dataset contains eight tables:<br>
 
+                <li>Customers: customer data<br>
+                Employees: all employee information<br>
+                Offices: sales office information<br>
+                Orders: customers' sales orders<br>
+                OrderDetails: sales order line for each sales order<br>
+                Payments: customers' payment records<br>
+                Products: a list of scale model cars<br>
+                ProductLines: a list of product line categories</li>
+                
+                Here's the Entity Relationship Diagram:<br>
+                <div class="sql-code">
+                <center><img src="Entity_Relationship_Diagram.png" alt="Entity Relationship Diagram" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
+            </div></ul>
+            
+        
             <ul> <p>The SQL queries and Power BI visuals were created using the following steps:</p></ul></center>
             <ul><li><strong>SQL:</strong><br>
 
@@ -132,17 +149,13 @@
                     - Listed the top 5 most and least valuable customers.<br>
                     
                     <strong>For Q3:</strong><br>
-                    - Calculated number of new customers acquired per month and decided to spend money in acquisition.<br>
+                    - Calculated number of new customers acquired per month and decided to spend money on acquisition.<br>
                     - Calculated the average customer lifetime value.<br></li></ul>
 
             <ul><li><strong>Power BI:</strong><br>
                     
-                    - Converted the dataset to .csv, uploaded to PBI Desktop and cleaned up the data.<br>
-                    - Created the Entity Relationship Diagram.<br>
-                <div class="sql-code">
-                <center><img src="Entity_Relationship_Diagram.png" alt="Entity Relationship Diagram" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
-            </div>
-
+                    - Converted the dataset to .csv, uploaded it to PBI Desktop and cleaned up the data.<br>
+                    
                     <strong>For Q1:</strong><br>
                     - Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br>
                     - Created measures for 'Low Stock Ratio' and 'Product Performance' using the formulae.<br>
