@@ -1,196 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Somesh Kolluru | Business Questions answered using SQL and Power BI</title>
-  <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somesh Kolluru | Business Questions answered using SQL and Power BI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f9f9f9;
-    }
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 1.5em 0;
+            text-align: center;
+        }
 
-    header {
-      background-color: #0078d7;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
 
-    .toggle-buttons {
-      display: flex;
-      justify-content: center;
-      margin: 1rem 0;
-    }
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
 
-    .toggle-buttons button {
-      background-color: #0078d7;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
+        main {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
 
-    .toggle-buttons button.active {
-      background-color: #0056a6;
-    }
+        section {
+            margin-bottom: 2em;
+        }
 
-    .section {
-      display: none;
-      padding: 1rem;
-      text-align: center;
-    }
+        .toggle-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-    .section.active {
-      display: block;
-    }
+        .toggle-buttons button {
+            background: #0073e6;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
 
-    .visual-container iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-    }
+        .toggle-buttons button:hover {
+            background: #005bb5;
+        }
 
-    footer {
-      background-color: #0078d7;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+        .content {
+            display: none;
+        }
 
-    .question {
-      margin-bottom: 2rem;
-    }
+        .content.active {
+            display: block;
+        }
 
-    .sql-code {
-      background: #f1f1f1;
-      padding: 1rem;
-      border-radius: 5px;
-      text-align: left;
-      overflow-x: auto;
-    }
-  </style>
+        .sql-code {
+            background: #f1f1f1;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: left;
+            overflow-x: auto;
+        }
+
+        .visual-container iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+        }
+    </style>
+    <script>
+        function toggleContent(section) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
 </head>
 <body>
-  <header>
-    <h1>Business Questions answered using SQL and Power BI</h1>
-  </header>
+    <header>
+        <h1>Business Questions answered using SQL and Power BI</h1>
+        <p>Analyse and understand key business metrics to derive insights and make marketing strategies</p>
+    </header>
 
-  <center> <h2>About the project:
-  <h3>This project explores sales data for an automobile manufacturer, using SQL and Power BI to uncover insights.<br>
-      The analysis answers key business questions, highlights trends, and provides actionable recommendations. </h3> </center>
+    <main>
+        <div class="toggle-buttons">
+            <button onclick="toggleContent('process')">Process</button>
+            <button onclick="toggleContent('sql-responses')">SQL Responses</button>
+            <button onclick="toggleContent('pbi-responses')">PBI Responses</button>
+            <button onclick="toggleContent('insights')">Insights</button>
+        </div>
 
-  <div class="toggle-buttons">
-    <button id="sqlButton" class="active">SQL Responses</button>
-    <button id="pbiButton">PBI Visuals </button>
-  </div>
+        <section id="process" class="content active">
+            <center><h2>About the project:</h2>
+            <ul><p>This project explores sales data for an automobile manufacturer, using SQL and Power BI to uncover insights.<br>
+                The analysis answers key business questions, highlights trends and provides actionable recommendations.<br></ul>
 
-  <!-- SQL Responses Section -->
-  <section id="sqlSection" class="section active">
-    <h2>SQL Responses to Business Questions</h2>
+            <ul> <p>The SQL queries and Power BI visuals were created using the following steps:</p></ul></center>
+            <ul><li><strong>SQL:</strong><br>
 
-    <!-- Question 1 -->
-    <div class="question">
-      <h3>1. Which products should we order more of or less of?</h3>
-      <div class="sql-code">
-       <center> <p> This analysis helps optimise inventory levels to prevent overstocking or running out of stock.</p> 
-        <img src="SQL_PBI_Project-SQL_Q1.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;">
-      <h4> Insights:<br>
-      1. Is there love?<br>
-      2. For real?</h4> </center>
-      </div>
-    </div>
+                    <strong>For Q1:</strong><br>
+                    - Calculated the products that were almost out of stock.<br>
+                    - Calculated the products that sold the most.<br>
+                    - Combined the two and listed the products that were the most profitable.<br>
+                    
+                    <strong>For Q2:</strong><br>
+                    - Calculated the total profits brought by each customer.<br>
+                    - Listed the top 5 most and least valuable customers.<br>
+                    
+                    <strong>For Q3:</strong><br>
+                    - Calculated number of new customers acquired per month and decided to spend money in acquisition.<br>
+                    - Calculated the average customer lifetime value.<br></li></ul>
 
-    <!-- Question 2 -->
-    <div class="question">
-      <h3>2. What are the monthly sales trends over the past year?</h3>
-      <div class="sql-code">
-        <center> <p> This analysis gives us the profit generated through each customer across different countries.</p>
-        <img src="SQL_PBI_Project-SQL_Q2_v2.png" alt="Customer Profit" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
-      </div>
-    </div>
+            <ul><li><strong>Power BI:</strong><br>
+                    
+                    - Converted the dataset to .csv, uploaded to PBI Desktop and cleaned up the data.<br>
+                    - Created the Entity Relationship Diagram.<br>
 
-    <!-- Question 3 -->
-    <div class="question">
-      <h3>3. Which regions contributed the most to sales revenue?</h3>
-      <div class="sql-code">
-        <center> <p>This analysis returns the average customer lifetime value.</p>
-        <img src="SQL_PBI_Project-SQL_Q3_v2.png" alt="Average Customer Lifetime Value" style="width:100%; max-width:1080px; margin: 20px 0;"> </center>
-      </div>
-    </div>
-  </section>
+                    <strong>For Q1:</strong><br>
+                    - Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br>
+                    - Created measures for 'Low Stock Ratio' and 'Product Performance' using the formulae.<br>
+                    - Used two Stacked Bar Charts in the Report View and added the respective measure to generate the visual.<br>
 
-  <!-- Power BI Visuals Section -->
-  <section id="pbiSection" class="section">
-    <h2>Power BI Visuals for Business Questions</h2>
+                    <strong>For Q2:</strong><br>
+                    - Created measures for 'Total Orders' and 'Total Profit' in the 'order details' table.<br>
+                    - Selected a Scatter Chart and added 'Total Orders' to X-axis and 'Total Profit' to Y-axis.<br>
+                    - Also added fields like 'country', 'customernumber' and 'no. of vehicles ordered' for a more detailed visual.<br>
 
-    <!-- Question 1 -->
-    <div class="question">
-      <h3>1. Which products should we order more of or less of?</h3>
-      <h4> <center> Here's a distribution of the products based on Low Stock Ratio and Highest Sales Performance. </h4> </center>
-      <div class="visual-container">
-        <iframe title="SQL PBI Project - Most Valuable Products" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMWYwZjE2MTMtNmE3NS00OTljLThmYTYtNjMyNGJmZjU4NTRkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-      </div>
-    </div>
+                    <strong>For Q3:</strong><br>
+                    - Merged the necessary tables and created measures for 'CLV' and 'Average CLV per Customer'.<br>
+                    - Created CLV bins to categorise customers based on their lifetime value:<br>
+                       CLV < 20000 - Low CLV<br>
+                       CLV >= 20000 and < 50000 - Medium CLV<br>
+                       CLV >= 50000 - High CLV<br>
+ 
+                    - Selected a Histogram (Clustered Column Chart) for the CLV bins.<br>
+                    - Selected a Treemap for CLV distribution by each customer and colour-coded them by 'country'.<br>
+                    - Selected three Cards for 'Total CLV', 'Total Customers' and 'Average CLV per Customer'.<br></li></ul>
+                   
+                   
+                <ul><li><strong>Tools and languages used:</strong><br>
+                    - SQL queries: DB Browser for SQLite<br>
+                    - Data Visualisation: Microsoft Power BI Desktop & Power BI Service<br>
+                    - HTML & CSS<br>
+                    - Canva<br>
+                    - ChatGPT<br>
+                    - Perplexity<br>
+                    - GitHub<br>        
+                </li> </ul>
+        </section>
 
-    <!-- Question 2 -->
-    <div class="question">
-      <h3>2. What are the monthly sales trends over the past year?</h3>
-      <h4> Here's a distribution of the products based on Low Stock Ratio and Highest Sales Performance. </h4>
-      <div class="visual-container">
-        <iframe title="SQL PBI Project - Customer Profit" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDI2MGRkMmItNjlmMC00ZGMwLTgxYWYtOTg3YjIwMzAzYjJkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-      </div>
-    </div>
+        <section id="sql-responses" class="content">
+            <h2>SQL Responses</h2>
+            <p>1. Which products should we order more of or less of?</p>
+            <div class="sql-code">
+                <center> <p> The below analysis helps optimise inventory levels to prevent overstocking or running out of stock.</p> 
+                    <img src="SQL_PBI_Project-SQL_Q1.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
+            </div>
 
-    <!-- Question 3 -->
-    <div class="question">
-      <h3>3. Which regions contributed the most to sales revenue?</h3>
-      <h4> Here's a distribution of the products based on Low Stock Ratio and Highest Sales Performance. </h4>
-      <div class="visual-container">
-        <iframe title="SQL PBI Project - Customer Lifetime Value" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTc1MzkxY2ItY2ZmNy00OGVhLThmMzctN2I3OWNkNWFiNzJjIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-      </div>
-    </div>
-  </section>
+            <p>2. What are the monthly sales trends over the past year?</p>
+            <div class="sql-code">
+                <center> <p> The below analysis gives us the most and the least valuable customers.</p> 
+                    <img src="SQL_PBI_Project-SQL_Q2_v3.png" alt="Most & Least Valuable Customers" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
+            </div>
 
-  <footer>
-    <p>Credit: Dataquest | Guided Project: Customers and Products Analysis Using SQL<br>
-&copy;2025 Business Questions answered using SQL and Power BI by Somesh Kolluru. All rights reserved.</p>
-  </footer>
+            <p>3. Which regions contributed the most to sales revenue?</p>
+            <div class="sql-code">
+                <center> <p> The below analysis returns the average customer lifetime value.</p> 
+                    <img src="SQL_PBI_Project-SQL_Q3_v2.png" alt="Average Customer Lifetime Value" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
+            </div>
 
-  <script>
-    // Toggle sections
-    const sqlButton = document.getElementById("sqlButton");
-    const pbiButton = document.getElementById("pbiButton");
-    const sqlSection = document.getElementById("sqlSection");
-    const pbiSection = document.getElementById("pbiSection");
+        </section>
 
-    sqlButton.addEventListener("click", () => {
-      sqlButton.classList.add("active");
-      pbiButton.classList.remove("active");
-      sqlSection.classList.add("active");
-      pbiSection.classList.remove("active");
-    });
+        <section id="pbi-responses" class="content">
+            <h2>PBI Responses</h2>
 
-    pbiButton.addEventListener("click", () => {
-      pbiButton.classList.add("active");
-      sqlButton.classList.remove("active");
-      pbiSection.classList.add("active");
-      sqlSection.classList.remove("active");
-    });
-  </script>
+            <center><h3>1. Which products should we order more of or less of?</h3>
+            <p>The below visual shows the distribution of the products based on Low Stock Ratio and Highest Sales Performance.</p></center>
+            <div class="visual-container">
+                <iframe title="SQL PBI Project - Most Valuable Products" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMWYwZjE2MTMtNmE3NS00OTljLThmYTYtNjMyNGJmZjU4NTRkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+            
+            <center><h3>2. What are the monthly sales trends over the past year?</h3>
+            <p> The below visual shows the distribution of the profit generated through each customer. </p></center>
+            <div class="visual-container">
+            <iframe title="SQL PBI Project - Customer Profit" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDI2MGRkMmItNjlmMC00ZGMwLTgxYWYtOTg3YjIwMzAzYjJkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+
+            <center><h3>3. Which regions contributed the most to sales revenue?</h3>
+            <p> The below visuals show how customers have been categorised based on their CLV and how they stack up against each other. </p></center>
+            <div class="visual-container">
+            <iframe title="SQL PBI Project - Customer Lifetime Value" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTc1MzkxY2ItY2ZmNy00OGVhLThmMzctN2I3OWNkNWFiNzJjIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+
+        </section>
+
+        <section id="insights" class="content">
+            <h2>Insights</h2>
+            <ul>
+                <li>The low stock ratio and product performance tell us the most in-demand products.<br>
+                    Vintage cars and motorcycles are the priority for restocking.<br>
+                    They sell frequently and they are the highest-performance products.<br>
+                    This way, we can prioritise stocking and build strategies around these products.</li></ul>
+
+            <ul><li>Through customer profit, we have the most valuable as well as the least-committed customers.<br>
+                    We can determine how to drive loyalty and attract more customers.</li></ul>
+
+            <ul><li>LTV tells us how much profit an average customer generates during their lifetime with our store.<br>
+                    We can use it to predict our future profit.<br>
+                    So, if we get ten new customers next month, we'll earn 390,395 dollars.<br>
+                    We can decide based on this prediction how much we can spend on acquiring new customers.</li></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Credit: Dataquest | Guided Project: Customers and Products Analysis Using SQL<br>
+            &copy;2025 Business Questions answered using SQL and Power BI by Somesh Kolluru. All rights reserved.</p>
+    </footer>
 </body>
 </html>
