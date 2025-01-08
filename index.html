@@ -108,77 +108,81 @@
 
     <main>
         <div class="toggle-buttons">
-            <button onclick="toggleContent('process')">Process</button>
+            <button onclick="toggleContent('process')">About the project</button>
             <button onclick="toggleContent('sql-responses')">SQL Responses</button>
             <button onclick="toggleContent('pbi-responses')">PBI Responses</button>
             <button onclick="toggleContent('insights')">Insights</button>
         </div>
 
         <section id="process" class="content active">
-            <center><h2>About the project:</h2>
+            <h2>About the project</h2>
             <ul><p>This project explores sales data for an automobile manufacturer, using SQL and Power BI to uncover insights.<br>
                 The analysis answers key business questions, highlights trends and provides actionable recommendations.<br></ul>
             
-            <ul>The given dataset contains eight tables:<br>
+            <ul>The given dataset contains eight tables:<br></ul>
 
-                <li>Customers: customer data<br>
-                Employees: all employee information<br>
-                Offices: sales office information<br>
-                Orders: customers' sales orders<br>
-                OrderDetails: sales order line for each sales order<br>
-                Payments: customers' payment records<br>
-                Products: a list of scale model cars<br>
-                ProductLines: a list of product line categories</li>
+                <ul><li>Customers: customer data<be></li>
+                <li>Employees: all employee information<br></li>
+                <li>Offices: sales office information<br></li>
+                <li>Orders: customers' sales orders<br></li>
+                <li>OrderDetails: sales order line for each sales order<br></li>
+                <li>Payments: customers' payment records<br></li>
+                <li>Products: a list of scale model cars<br></li>
+                <li>ProductLines: a list of product line categories</li></ul>
                 
-                Here's the Entity Relationship Diagram:<br>
+                <ul>Here's the Entity Relationship Diagram:<br>
                 <div class="sql-code">
                 <center><img src="Entity_Relationship_Diagram.png" alt="Entity Relationship Diagram" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
             </div></ul>
-            
-        
-            <ul> <p>The SQL queries and Power BI visuals were created using the following steps:</p></ul></center>
-            <ul><li><strong>SQL:</strong><br>
 
-                    <strong>For Q1:</strong><br>
+                <ul>The business questions posed by the business leads are:</ul>
+                <ul><strong>Q1: Which products should we order more of or less of?</strong></ul>
+                <ul><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</strong></ul>
+                <ul><strong>Q3: How much can we spend on acquiring new customers?</strong></ul>
+        
+            <ul> <p>To answer the above questions, I created SQL queries and Power BI visuals using the following steps:</p></ul>
+            <ul><li><strong>SQL</strong><br>
+
+                    <strong>For Q1</strong><br>
                     - Calculated the products that were almost out of stock.<br>
                     - Calculated the products that sold the most.<br>
                     - Combined the two and listed the products that were the most profitable.<br>
                     
-                    <strong>For Q2:</strong><br>
+                    <strong>For Q2</strong><br>
                     - Calculated the total profits brought by each customer.<br>
                     - Listed the top 5 most and least valuable customers.<br>
                     
-                    <strong>For Q3:</strong><br>
+                    <strong>For Q3</strong><br>
                     - Calculated number of new customers acquired per month and decided to spend money on acquisition.<br>
                     - Calculated the average customer lifetime value.<br></li></ul>
 
-            <ul><li><strong>Power BI:</strong><br>
+            <ul><li><strong>Power BI</strong><br>
                     
                     - Converted the dataset to .csv, uploaded it to PBI Desktop and cleaned up the data.<br>
                     
-                    <strong>For Q1:</strong><br>
+                    <strong>For Q1</strong><br>
                     - Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br>
                     - Created measures for 'Low Stock Ratio' and 'Product Performance' using the formulae.<br>
                     - Used two Stacked Bar Charts in the Report View and added the respective measure to generate the visual.<br>
 
-                    <strong>For Q2:</strong><br>
+                    <strong>For Q2</strong><br>
                     - Created measures for 'Total Orders' and 'Total Profit' in the 'order details' table.<br>
                     - Selected a Scatter Chart and added 'Total Orders' to X-axis and 'Total Profit' to Y-axis.<br>
                     - Also added fields like 'country', 'customernumber' and 'no. of vehicles ordered' for a more detailed visual.<br>
 
-                    <strong>For Q3:</strong><br>
+                    <strong>For Q3</strong><br>
                     - Merged the necessary tables and created measures for 'CLV' and 'Average CLV per Customer'.<br>
                     - Created CLV bins to categorise customers based on their lifetime value:<br>
-                       CLV < 20000 - Low CLV<br>
-                       CLV >= 20000 and < 50000 - Medium CLV<br>
-                       CLV >= 50000 - High CLV<br>
+                       <ul>CLV < 20000 - Low CLV<br></ul>
+                       <ul>CLV >= 20000 and < 50000 - Medium CLV<br></ul>
+                       <ul>CLV >= 50000 - High CLV<br></ul>
  
                     - Selected a Histogram (Clustered Column Chart) for the CLV bins.<br>
                     - Selected a Treemap for CLV distribution by each customer and colour-coded them by 'country'.<br>
                     - Selected three Cards for 'Total CLV', 'Total Customers' and 'Average CLV per Customer'.<br></li></ul>
                    
                    
-                <ul><li><strong>Tools and languages used:</strong><br>
+                <ul><li><strong>Tools and languages used</strong><br>
                     - SQL queries: DB Browser for SQLite<br>
                     - Data Visualisation: Microsoft Power BI Desktop & Power BI Service<br>
                     - HTML & CSS<br>
@@ -191,19 +195,19 @@
 
         <section id="sql-responses" class="content">
             <h2>SQL Responses</h2>
-            <p>1. Which products should we order more of or less of?</p>
+            <p><strong>1. Which products should we order more of or less of?</p></strong>
             <div class="sql-code">
                 <center> <p> The below analysis helps optimise inventory levels to prevent overstocking or running out of stock.</p> 
                     <img src="SQL_PBI_Project-SQL_Q1.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
             </div>
 
-            <p>2. What are the monthly sales trends over the past year?</p>
+            <p><strong>2. How should we match marketing and communication strategies to customer behaviour?</p></strong>
             <div class="sql-code">
                 <center> <p> The below analysis gives us the most and the least valuable customers.</p> 
                     <img src="SQL_PBI_Project-SQL_Q2_v3.png" alt="Most & Least Valuable Customers" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
             </div>
 
-            <p>3. Which regions contributed the most to sales revenue?</p>
+            <p><strong>3. How much can we spend on acquiring new customers?</p></strong>
             <div class="sql-code">
                 <center> <p> The below analysis returns the average customer lifetime value.</p> 
                     <img src="SQL_PBI_Project-SQL_Q3_v2.png" alt="Average Customer Lifetime Value" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
@@ -214,20 +218,21 @@
         <section id="pbi-responses" class="content">
             <h2>PBI Responses</h2>
 
-            <center><h3>1. Which products should we order more of or less of?</h3>
-            <p>The below visual shows the distribution of the products based on Low Stock Ratio and Highest Sales Performance.</p></center>
+            <h3>1. Which products should we order more of or less of?</h3>
+            <center><p>The below visual shows the distribution of the products based on Low Stock Ratio and Highest Sales Performance.</p></center>
             <div class="visual-container">
                 <iframe title="SQL PBI Project - Most Valuable Products" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMWYwZjE2MTMtNmE3NS00OTljLThmYTYtNjMyNGJmZjU4NTRkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
             </div>
             
-            <center><h3>2. What are the monthly sales trends over the past year?</h3>
-            <p> The below visual shows the distribution of the profit generated through each customer. </p></center>
+            <h3>2. How should we match marketing and communication strategies to customer behaviour?</h3>
+            <center><p> The below visual shows the distribution of the profit generated through each customer. </p></center>
             <div class="visual-container">
             <iframe title="SQL PBI Project - Customer Profit" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDI2MGRkMmItNjlmMC00ZGMwLTgxYWYtOTg3YjIwMzAzYjJkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
             </div>
 
-            <center><h3>3. Which regions contributed the most to sales revenue?</h3>
-            <p> The below visuals show how customers have been categorised based on their CLV and how they stack up against each other. </p></center>
+            <h3>3. How much can we spend on acquiring new customers?</h3>
+            <center><p> The below visuals show how customers have been categorised based on their CLV and how they stack up against each other.<br>
+            We also have created cards for the total CLV, total number of customers and the average CLV per customer.</p></center>
             <div class="visual-container">
             <iframe title="SQL PBI Project - Customer Lifetime Value" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTc1MzkxY2ItY2ZmNy00OGVhLThmMzctN2I3OWNkNWFiNzJjIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
             </div>
@@ -236,15 +241,18 @@
 
         <section id="insights" class="content">
             <h2>Insights</h2>
+            <ul><strong>1. Which products should we order more of or less of?</strong></ul>
             <ul>
                 <li>The low stock ratio and product performance tell us the most in-demand products.<br>
                     Vintage cars and motorcycles are the priority for restocking.<br>
                     They sell frequently and they are the highest-performance products.<br>
                     This way, we can prioritise stocking and build strategies around these products.</li></ul>
 
+            <ul><strong>2. How should we match marketing and communication strategies to customer behaviour?</strong></ul>
             <ul><li>Through customer profit, we have the most valuable as well as the least-committed customers.<br>
                     We can determine how to drive loyalty and attract more customers.</li></ul>
 
+            <ul><strong>3. How much can we spend on acquiring new customers?</strong></ul>
             <ul><li>LTV tells us how much profit an average customer generates during their lifetime with our store.<br>
                     We can use it to predict our future profit.<br>
                     So, if we get ten new customers next month, we'll earn 390,395 dollars.<br>
