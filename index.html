@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base target="_blank" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer & Product Analysis by Somesh Kolluru</title>
@@ -114,24 +115,44 @@
     <header>
         <h1>Customer & Product Analysis using SQL & Power BI</h1>
         <h2>A project by Somesh Kolluru</h2>
-        <p>Hi. I'm Somesh. In this project, I use SQL & Power BI to answer business questions and derive key insights to build marketing strategies.</p>
+        <p>In this project, I use SQL & Power BI to answer business questions and derive key insights to build marketing strategies.</p>
     </header>
 
     <main>
         <div class="toggle-buttons">
-            <button onclick="toggleContent('process')">About the project</button>
+            <button onclick="toggleContent('overview')">Project Overview</button>
+            <button onclick="toggleContent('data-provided')">Project Details</button>
             <button onclick="toggleContent('sql-responses')">SQL Responses</button>
             <button onclick="toggleContent('pbi-responses')">PBI Responses</button>
             <button onclick="toggleContent('insights')">Insights</button>
         </div>
 
-        <section id="process" class="content active">
-            <h2>About the project</h2>
-            <ul><p>This project explores sales data for an automobile manufacturer, using SQL and Power BI to uncover insights.<br>
-                The analysis answers key business questions, highlights trends and provides actionable recommendations.<br></ul>
-            
-            <ul>The given dataset contains eight tables:<br></ul>
+        <section id="overview" class="content active">
+            <h2>Project Overview</h2>
+            <h3><strong>Introduction</strong></h3>
+            <ul>This project aims to uncover actionable insights from business data to optimise operations and improve decision-making.<br>
+                It focuses on three key business questions critical to growth and customer retention.<br></ul>
 
+            <h3><strong>Objective</strong></h3>
+            <ul>This project aims to analyse historical business data to derive meaningful insights that help in inventory management, customer segmentation and optimising marketing budgets.<br>
+            Through this project, I want to demonstrate my data analysis and visualisation skills and show how these skills contribute to my marketing background.</ul>
+
+            <h3><strong>Significance</strong></h3>
+            <ul>This project demonstrates how data-driven insights can lead to more informed decisions, improving profitability and operational efficiency.<br></ul>
+                      
+            <h3><strong>About me</strong></h3>
+            <ul>I'm <strong>Somesh Kolluru</strong>, a digital marketing specialist with a love for telling stories through data.<br>
+                Connect with me on LinkedIn 👇</ul>
+            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="someshkolluru" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/someshkolluru?trk=profile-badge">Somesh Kolluru</a></div>
+        </section>
+
+        <section id="data-provided" class="content active">
+            <h2>Project Details</h2>
+
+            <h3><strong>About the project</strong></h3>
+            <ul>This project explores the sales record database for an automobile manufacturer.<br>
+            
+            <ul><strong>The given dataset contains eight tables</strong><br></ul>
                 <ul>Customers: customer data<br>
                 Employees: all employee information<br>
                 Offices: sales office information<br>
@@ -141,86 +162,54 @@
                 Products: a list of scale model cars<br>
                 ProductLines: a list of product line categories</ul>
                 
-                <ul>Here's the Entity Relationship Diagram:<br>
+                <ul><strong>Here's the Entity Relationship Diagram that explains how the fields are related to each other:</strong><br>
                 <div class="sql-code">
                 <center><img src="Entity_Relationship_Diagram.png" alt="Entity Relationship Diagram" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
             </div></ul>
 
-                <ul>The business questions posed by the higher management are:</ul>
+                <ul>Using this dataset, the management expects answers to the following questions:</ul>
                 <ul><strong>Q1: Which products should we order more of or less of?</strong></ul>
                 <ul><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</strong></ul>
                 <ul><strong>Q3: How much can we spend on acquiring new customers?</strong></ul>
-        
-            <ul> <p>To answer the above questions, I created SQL queries and Power BI visuals using the following steps:</p></ul>
-            <ul><strong>SQL</strong><br>
-
-                    <strong>For Q1</strong><br>
-                    Calculated the products that were almost out of stock.<br>
-                    Calculated the products that sold the most.<br>
-                    Combined the two and listed the products that were the most profitable.<br>
-                    
-                    <strong>For Q2</strong><br>
-                    Calculated the total profits brought by each customer.<br>
-                    Listed the top 5 most and least valuable customers.<br>
-                    
-                    <strong>For Q3</strong><br>
-                    Calculated the number of new customers acquired per month and decided to spend money on acquisition.<br>
-                    Calculated the average customer lifetime value.<br></ul>
-
-            <ul><strong>Power BI</strong><br>
-                    
-                    I converted the dataset to .csv, uploaded it to PBI Desktop, and cleaned up the data.<br>
-                    
-                    <strong>For Q1</strong><br>
-                    Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br>
-                    Created measures for 'Low Stock Ratio' and 'Product Performance' using the formulae.<br>
-                    Used two Stacked Bar Charts in the Report View and added the respective measure to generate the visual.<br>
-
-                    <strong>For Q2</strong><br>
-                    Created measures for 'Total Orders' and 'Total Profit' in the 'order details' table.<br>
-                    Selected a Scatter Chart and added 'Total Orders' to X-axis and 'Total Profit' to Y-axis.<br>
-                    Also added fields like 'country', 'customernumber' and 'no. of vehicles ordered' for a more detailed visual.<br>
-
-                    <strong>For Q3</strong><br>
-                    Merged the necessary tables and created measures for 'CLV' and 'Average CLV per Customer'.<br>
-                    Created CLV bins to categorise customers based on their lifetime value:
-                       <ul>CLV < 20000 - Low CLV<br></ul>
-                       <ul>CLV >= 20000 and < 50000 - Medium CLV<br></ul>
-                       <ul>CLV >= 50000 - High CLV<br></ul>
- 
-                    Selected a Histogram (Clustered Column Chart) for the CLV bins.<br>
-                    Selected a Treemap for CLV distribution by each customer and colour-coded them by 'country'.<br>
-                    Selected three Cards for 'Total CLV', 'Total Customers' and 'Average CLV per Customer'.<br></ul>
-                   
-                   
-                <ul><strong>Tools and languages used</strong><br>
-                    SQL Queries: DB Browser for SQLite<br>
-                    Data Visualisation: Microsoft Power BI Desktop & Power BI Service<br>
-                    HTML & CSS<br>
-                    Canva<br>
-                    ChatGPT<br>
-                    Perplexity<br>
-                    GitHub<br></ul>
+                
+                <h3><strong>These are the tools and languages I used for this project</strong><br></h3>
+                 <ul><strong>SQL Queries:</strong> DB Browser for SQLite<br>
+                    <strong>Data Visualisation:</strong> Microsoft Power BI Desktop & Power BI Service<br>
+                    <strong>Website Design:</strong> GitHub, HTML & CSS<br>
+                    <strong>General assistance:</strong> ChatGPT & Perplexity<br>
+                    <strong>Creatives:</strong> Canva<br></ul>
         </section>
 
         <section id="sql-responses" class="content">
             <h2>SQL Responses</h2>
             <p><strong>Q1: Which products should we order more of or less of?</p></strong>
+            <ul>To answer this question using SQL, I:<br>
+                 <center><p>Calculated the products that were almost out of stock (Low Stock Ratio).<br>
+                    Calculated the products that sold the most (Total Sales).<br>
+                    Combined the two and listed the products that were the most profitable.</ul></p>
             <div class="sql-code">
-                <center> <p> The below analysis helps optimise inventory levels to prevent overstocking or running out of stock.</p> 
-                    <img src="SQL_PBI_Project-SQL_Q1.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
+                <img src="SQL_PBI_Project-SQL_Q1.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;">
+            <p> This analysis helps optimise inventory levels to prevent overstocking or running out of stock.</p></center>
             </div>
 
             <p><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</p></strong>
+            <ul>To answer this question using SQL, I:<br>
+              <center><p>Calculated the total profits brought by each customer.<br>
+                    Listed the top 5 most and least valuable customers.</ul></p>
             <div class="sql-code">
-                <center> <p> The below analysis gives us the most and the least valuable customers.</p> 
-                    <img src="SQL_PBI_Project-SQL_Q2_v3.png" alt="Most & Least Valuable Customers" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
+                <center> 
+                    <img src="SQL_PBI_Project-SQL_Q2_v3.png" alt="Most & Least Valuable Customers" style="width:100%; max-width:1080px; margin: 20px 0;">
+            <p> This analysis gives us the most and the least valuable customers.</p></center>
             </div>
 
             <p><strong>Q3: How much can we spend on acquiring new customers?</p></strong>
+             <ul>To answer this question using SQL, I:<br>
+                  <center><p>Calculated the number of new customers acquired per month and decided to spend money on acquisition.<br>
+                    Calculated the average customer lifetime value.</ul></p>   
             <div class="sql-code">
-                <center> <p> The below analysis returns the average customer lifetime value.</p> 
-                    <img src="SQL_PBI_Project-SQL_Q3_v2.png" alt="Average Customer Lifetime Value" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
+                <center>  
+                    <img src="SQL_PBI_Project-SQL_Q3_v2.png" alt="Average Customer Lifetime Value" style="width:100%; max-width:1080px; margin: 20px 0;">
+            <p> This analysis returns the average customer lifetime value.</p></center>
             </div>
 
         </section>
@@ -229,22 +218,40 @@
             <h2>PBI Responses</h2>
 
             <p><strong>Q1: Which products should we order more of or less of?</strong></p>
-            <center><p>The below visual shows the distribution of the products based on Low Stock Ratio and Highest Sales Performance.</p></center>
+            <ul>To answer this question using Power BI, I:<br>
+            <center><p>Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br>
+                    Created measures for 'Low Stock Ratio' and 'Product Performance' using the previous formulae.<br>
+                    Used two Stacked Bar Charts in the Report View and added the respective measure to generate the visual.</p></center>
             <div class="visual-container">
                 <iframe title="SQL PBI Project - Most Valuable Products" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMWYwZjE2MTMtNmE3NS00OTljLThmYTYtNjMyNGJmZjU4NTRkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+            <center><p>This visual shows the distribution of the products based on Low Stock Ratio and Highest Sales Performance.</p></center>
             </div>
             
             <p><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</strong></p>
-            <center><p> The below visual shows the distribution of the profit generated through each customer. </p></center>
+            <ul>To answer this question using Power BI, I:<br>
+            <center><p>Created measures for 'Total Orders' and 'Total Profit' in the 'order details' table.<br>
+                    Selected a Scatter Chart and added 'Total Orders' to X-axis and 'Total Profit' to Y-axis.<br>
+                    Also added fields like 'country', 'customernumber' and 'no. of vehicles ordered' for a more detailed visual.</p></center>
             <div class="visual-container">
             <iframe title="SQL PBI Project - Customer Profit" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDI2MGRkMmItNjlmMC00ZGMwLTgxYWYtOTg3YjIwMzAzYjJkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+            <center><p> This visual shows the distribution of the profit generated through each customer.</p></center>
             </div>
 
             <p><strong>Q3: How much can we spend on acquiring new customers?</strong></p>
-            <center><p> The below visuals show how customers have been categorised based on their CLV and how they stack up against each other.<br>
-            I have also created cards for the total CLV, total number of customers and the average CLV per customer.</p></center>
+            <ul>To answer this question using Power BI, I:<br>
+            <center><p>Merged the necessary tables and created measures for 'CLV' and 'Average CLV per Customer'.<br>
+                    Created CLV bins to categorise customers based on their lifetime value:
+                       <ul>CLV < 20000 - Low CLV<br></ul>
+                       <ul>CLV >= 20000 and < 50000 - Medium CLV<br></ul>
+                       <ul>CLV >= 50000 - High CLV<br></ul>
+ 
+                    Selected a Histogram (Clustered Column Chart) for the CLV bins.<br>
+                    Selected a Treemap for CLV distribution by each customer and colour-coded them by 'country'.<br>
+                    Selected three Cards for 'Total CLV', 'Total Customers' and 'Average CLV per Customer'.</p></center>
             <div class="visual-container">
             <iframe title="SQL PBI Project - Customer Lifetime Value" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTc1MzkxY2ItY2ZmNy00OGVhLThmMzctN2I3OWNkNWFiNzJjIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+            <center><p> The below visuals show how customers have been categorised based on their CLV and how they stack up against each other.<br>
+            I have also created cards for the total CLV, total number of customers and the average CLV per customer.</p></center>
             </div>
 
         </section>
@@ -280,4 +287,5 @@
             &copy;2025 Customer & Product Analysis using SQL & Power BI by Somesh Kolluru. All rights reserved.</p>
     </footer>
 </body>
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </html>
