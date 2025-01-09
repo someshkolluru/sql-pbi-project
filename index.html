@@ -121,14 +121,14 @@
 
     <main>
         <div class="toggle-buttons">
-            <button onclick="toggleContent('overview')">Project Overview</button>
-            <button onclick="toggleContent('data-provided')">Project Details</button>
+            <button onclick="toggleContent('project-overview')">Project Overview</button>
+            <button onclick="toggleContent('project-details')">Project Details</button>
             <button onclick="toggleContent('sql-responses')">SQL Responses</button>
             <button onclick="toggleContent('pbi-responses')">PBI Responses</button>
             <button onclick="toggleContent('insights')">Insights</button>
         </div>
 
-        <section id="overview" class="content active">
+        <section id="project-overview" class="content active">
             <h2>Project Overview</h2>
             <h3><strong>Introduction</strong></h3>
             <ul>This project aims to uncover actionable insights from business data to optimise operations and improve decision-making.<br>
@@ -143,11 +143,9 @@
                       
             <h3><strong>About me</strong></h3>
             <ul>I'm <strong>Somesh Kolluru</strong>, a digital marketing specialist with a love for telling stories through data.<br>
-                Connect with me on LinkedIn 👇</ul>
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="someshkolluru" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/someshkolluru?trk=profile-badge">Somesh Kolluru</a></div>
-        </section>
+            </section>
 
-        <section id="data-provided" class="content">
+        <section id="project-details" class="content">
             <h2>Project Details</h2>
 
             <h3><strong>About the project</strong></h3>
@@ -169,9 +167,9 @@
             </div></ul>
 
                 <h3>Using this dataset, the management expects answers to the following questions:<br></h3>
-                <ul><strong>Q1: Which products should we order more of or less of?</strong></ul>
-                <ul><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</strong></ul>
-                <ul><strong>Q3: How much can we spend on acquiring new customers?</strong></ul>
+                <ul>Q1: Which products should we order more of or less of?</ul>
+                <ul>Q2: How should we match marketing and communication strategies to customer behaviour?</ul>
+                <ul>Q3: How much can we spend on acquiring new customers?</ul>
                 
                 <h3><strong>These are the tools and languages I used for this project</strong><br></h3>
                  <ul><strong>SQL Queries:</strong> DB Browser for SQLite<br>
@@ -185,9 +183,9 @@
             <h2>SQL Responses</h2>
             <p><strong>Q1: Which products should we order more of or less of?</strong></p>
            <ul>To answer this question using SQL, I:<br>
-                <center><li>Calculated the products that were almost out of stock (Low Stock Ratio).<br></li>
+                <li>Calculated the products that were almost out of stock (Low Stock Ratio).<br></li>
                     <li>Calculated the products that sold the most (Total Sales).<br></li>
-                    <li>Combined the two and listed the products that were the most profitable.</li><br></center></ul>
+                    <li>Combined the two and listed the products that were the most profitable.</li><br></ul>
             <div class="sql-code">
                 <img src="SQL_PBI_Project-SQL_Q1.png" alt="Low Stock Ratio & Product Performance" style="width:100%; max-width:1080px; margin: 20px 0;">
             <p> This analysis helps optimise inventory levels to prevent overstocking or running out of stock.</p>
@@ -195,8 +193,8 @@
 
             <p><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</p></strong>
             <ul>To answer this question using SQL, I:<br>
-              <center><li>Calculated the total profits brought by each customer.<br></li>
-                    <li>Listed the top 5 most and least valuable customers.</li><br></center></ul>
+              <li>Calculated the total profits brought by each customer.<br></li>
+                    <li>Listed the top 5 most and least valuable customers.</li><br></ul>
             <div class="sql-code">
                 <img src="SQL_PBI_Project-SQL_Q2_v3.png" alt="Most & Least Valuable Customers" style="width:100%; max-width:1080px; margin: 20px 0;">
             <p> This analysis gives us the most and the least valuable customers.</p>
@@ -204,8 +202,8 @@
 
             <p><strong>Q3: How much can we spend on acquiring new customers?</p></strong>
              <ul>To answer this question using SQL, I:<br>
-             <center><li>Calculated the number of new customers acquired per month and decided to spend money on acquisition.<br></li>
-                    <li>Calculated the average customer lifetime value.</li><br></center></ul>   
+             <li>Calculated the number of new customers acquired per month and decided to spend money on acquisition.<br></li>
+                    <li>Calculated the average customer lifetime value.</li><br></ul>   
             <div class="sql-code">
                   <img src="SQL_PBI_Project-SQL_Q3_v2.png" alt="Average Customer Lifetime Value" style="width:100%; max-width:1080px; margin: 20px 0;">
             <p>This analysis returns the average customer lifetime value.</p> 
@@ -218,28 +216,29 @@
 
             <p><strong>Q1: Which products should we order more of or less of?</strong></p>
             <ul>To answer this question using Power BI, I:<br>
-            <center><li>Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br></li>
+            <li>Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br></li>
                     <li>Created measures for 'Low Stock Ratio' and 'Product Performance' using the previous formulae.<br></li>
-                    <li>Used two Stacked Bar Charts in the Report View and added the respective measure to generate the visual.</li><br></center></ul>
+                    <li>Used two Stacked Bar Charts in the Report View and added the respective measure to generate the visual.</li><br></ul>
             <div class="visual-container">
                 <iframe title="SQL PBI Project - Most Valuable Products" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMWYwZjE2MTMtNmE3NS00OTljLThmYTYtNjMyNGJmZjU4NTRkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-           </div>
-                <center><p>This visual shows the distribution of the products based on Low Stock Ratio and Highest Sales Performance.</p></center>
+           <p>This visual shows the distribution of the products based on Low Stock Ratio and Highest Sales Performance.</p>
+            </div>
+               
             
             
             <p><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</strong></p>
             <ul>To answer this question using Power BI, I:<br>
-            <center><li>Created measures for 'Total Orders' and 'Total Profit' in the 'order details' table.<br></li>
+            <li>Created measures for 'Total Orders' and 'Total Profit' in the 'order details' table.<br></li>
                     <li>Selected a Scatter Chart and added 'Total Orders' to X-axis and 'Total Profit' to Y-axis.<br></li>
-                    <li>Also added fields like 'country', 'customernumber' and 'no. of vehicles ordered' for a more detailed visual.</li><br></center></ul>
+                    <li>Also added fields like 'country', 'customernumber' and 'no. of vehicles ordered' for a more detailed visual.</li><br></ul>
             <div class="visual-container">
             <iframe title="SQL PBI Project - Customer Profit" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDI2MGRkMmItNjlmMC00ZGMwLTgxYWYtOTg3YjIwMzAzYjJkIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-            <center><p> This visual shows the distribution of the profit generated through each customer.</p></center>
+            <p> This visual shows the distribution of the profit generated through each customer.</p>
             </div>
 
             <p><strong>Q3: How much can we spend on acquiring new customers?</strong></p>
             <ul>To answer this question using Power BI, I:<br>
-            <center><li>Merged the necessary tables and created measures for 'CLV' and 'Average CLV per Customer'.</li><br>
+            <li>Merged the necessary tables and created measures for 'CLV' and 'Average CLV per Customer'.</li><br>
                     <li>Created CLV bins to categorise customers based on their lifetime value:</li><br>
                        <ul>CLV < 20000 - Low CLV</ul><br>
                        <ul>CLV >= 20000 and < 50000 - Medium CLV</ul><br>
@@ -247,11 +246,11 @@
  
                     <li>Selected a Histogram (Clustered Column Chart) for the CLV bins.</li><br>
                     <li>Selected a Treemap for CLV distribution by each customer and colour-coded them by 'country'.</li><br>
-                    <li>Selected three Cards for 'Total CLV', 'Total Customers' and 'Average CLV per Customer'.</li><br></center></ul>
+                    <li>Selected three Cards for 'Total CLV', 'Total Customers' and 'Average CLV per Customer'.</li><br></ul>
             <div class="visual-container">
             <iframe title="SQL PBI Project - Customer Lifetime Value" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTc1MzkxY2ItY2ZmNy00OGVhLThmMzctN2I3OWNkNWFiNzJjIiwidCI6IjkyMjYwMjZhLTZhNmYtNDNiYi1hMjA4LTA2MDFhNTZjMGVkNCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-            <center><p> The below visuals show how customers have been categorised based on their CLV and how they stack up against each other.<br>
-            I have also created cards for the total CLV, total number of customers and the average CLV per customer.</p></center>
+            <p> The below visuals show how customers have been categorised based on their CLV and how they stack up against each other.<br>
+            I have also created cards for the total CLV, total number of customers and the average CLV per customer.</p>
             </div>
 
         </section>
@@ -279,6 +278,7 @@
 
     <footer>
         <p>Credit: Dataquest | Guided Project: Customers and Products Analysis Using SQL<br>
+        <a href="your-linkedin-profile-url" target="_blank">Let's connect on LinkedIn<br> </a>
         &copy;2025 Customer & Product Analysis using SQL & Power BI by Somesh Kolluru. All rights reserved.</p>
     </footer>
 </body>
