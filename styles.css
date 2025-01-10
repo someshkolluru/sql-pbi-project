@@ -49,27 +49,24 @@ body {
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            flex: 1 1 auto;
         }
 
         .toggle-buttons button:hover {
             background: #0056b3;
         }
 
-        /* For smaller screens */
+        /* Desktop layout (all buttons in one row) */
+        @media (min-width: 601px) {
+        .toggle-buttons {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+        }
+        }
+
+        /* Mobile layout (split buttons into two rows) */
         @media (max-width: 600px) {
         .toggle-buttons button {
-        flex: 1 1 calc(45% - 10px); /* Each button takes 45% of the row minus gap */
-        }
-
-        .toggle-buttons button:nth-child(1),
-        .toggle-buttons button:nth-child(2) {
-        flex: 1 1 calc(50% - 10px); /* First two buttons take 50% of the first row */
-        }
-
-        .toggle-buttons button:nth-child(3),
-        .toggle-buttons button:nth-child(4),
-        .toggle-buttons button:nth-child(5) {
-        flex: 1 1 calc(30% - 10px); /* Remaining three buttons split onto the second row */
+        flex: 1 1 45%; /* Each button takes 45% of the width on small screens */
         }
         }
 
