@@ -36,39 +36,40 @@ body {
 
         .toggle-buttons {
             display: flex;
+            flex-wrap: wrap; /* Allows wrapping */
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 10px; /* Adds space between buttons */
         }
 
         .toggle-buttons button {
-            background: #0073e6;
-            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff; /* Example color */
+            color: white;
             border: none;
-            padding: 10px 15px;
-            font-size: 1em;
-            cursor: pointer;
             border-radius: 5px;
-            transition: background 0.3s;
+            cursor: pointer;
         }
 
         .toggle-buttons button:hover {
-            background: #005bb5;
+            background: #0056b3;
         }
 
         /* For smaller screens */
         @media (max-width: 600px) {
-        .toggle-buttons {
-        justify-content: center; /* Center-align buttons */
-        }
-
         .toggle-buttons button {
-        flex: 1 1 calc(33% - 10px); /* Make each button take up 33% of the row minus the gap */
+        flex: 1 1 calc(45% - 10px); /* Each button takes 45% of the row minus gap */
         }
 
-        .toggle-buttons button:nth-child(4), 
+        .toggle-buttons button:nth-child(1),
+        .toggle-buttons button:nth-child(2) {
+        flex: 1 1 calc(50% - 10px); /* First two buttons take 50% of the first row */
+        }
+
+        .toggle-buttons button:nth-child(3),
+        .toggle-buttons button:nth-child(4),
         .toggle-buttons button:nth-child(5) {
-        flex: 1 1 calc(50% - 10px); /* Last two buttons take 50% of the second line */
+        flex: 1 1 calc(30% - 10px); /* Remaining three buttons split onto the second row */
         }
         }
 
