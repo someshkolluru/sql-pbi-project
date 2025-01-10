@@ -56,6 +56,22 @@ body {
             background: #005bb5;
         }
 
+        /* For smaller screens */
+        @media (max-width: 600px) {
+        .toggle-buttons {
+        justify-content: center; /* Center-align buttons */
+        }
+
+        .toggle-buttons button {
+        flex: 1 1 calc(33% - 10px); /* Make each button take up 33% of the row minus the gap */
+        }
+
+        .toggle-buttons button:nth-child(4), 
+        .toggle-buttons button:nth-child(5) {
+        flex: 1 1 calc(50% - 10px); /* Last two buttons take 50% of the second line */
+        }
+        }
+
         .content {
             display: none;
         }
