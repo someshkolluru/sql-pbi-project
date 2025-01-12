@@ -118,7 +118,7 @@ body {
 
         footer a {
         color: #fff; /* Change this to your desired color */
-        text-decoration: none; /* Removes underline (optional) */
+        text-decoration: underline; /* Removes underline (optional) */
         }
 
         footer a:hover {
