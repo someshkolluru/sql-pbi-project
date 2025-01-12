@@ -16,11 +16,11 @@ body {
 
         header h1 {
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2em;
         }
 
         header p {
-            margin: 0;
+            margin: 1em;
             font-size: 1.2em;
         }
 
@@ -35,22 +35,27 @@ body {
         }
 
         .toggle-buttons {
-            display: flex;
-            flex-wrap: wrap; /* Allows wrapping */
-            justify-content: center;
-            gap: 8px; /* Adds space between buttons */
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping */
+        justify-content: center;
+        gap: 8px; /* Adds space between buttons */
+        }
+
+        @media (max-width: 768px) {
+        .toggle-buttons button {
+        padding: 4px 8px; /* Even smaller for mobile */
+        font-size: 12px;
+        }
         }
 
         .toggle-buttons button {
-            padding: 10px 15px;
-            font-size: 12px;
-            background-color: #007bff; /* Example color */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            flex: 1 1 auto;
+        padding: 6px 12px; /* Reduces the internal spacing */
+        font-size: 14px; /* Smaller font */
+        width: auto; /* Allows buttons to size dynamically */
+        height: auto; /* Adjusts button height automatically */
+        border-radius: 5px; /* Rounded corners */
         }
+
 
         .toggle-buttons button:hover {
             background: #0056b3;
@@ -68,7 +73,7 @@ body {
             background: #f1f1f1;
             padding: 1rem;
             border-radius: 5px;
-            text-align: left;
+            text-align: center;
             overflow-x: auto;
         }
 
@@ -83,4 +88,14 @@ body {
             background: #333;
             color: #fff;
             padding: 1em 0;
+        }
+
+        footer a {
+        color: #fff; /* Change this to your desired color */
+        text-decoration: none; /* Removes underline (optional) */
+        }
+
+        footer a:hover {
+        color: #007bff; /* Change this to your desired hover color */
+        text-decoration: underline; /* Adds underline on hover (optional) */
         }
