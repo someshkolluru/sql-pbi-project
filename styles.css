@@ -10,13 +10,13 @@ body {
         header {
             background: #0073e6;
             color: #fff;
-            padding: 1.5em 0;
+            padding: 1.2em 0;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.2em;
         }
 
         header p {
@@ -38,12 +38,12 @@ body {
             display: flex;
             flex-wrap: wrap; /* Allows wrapping */
             justify-content: center;
-            gap: 10px; /* Adds space between buttons */
+            gap: 8px; /* Adds space between buttons */
         }
 
         .toggle-buttons button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 10px 15px;
+            font-size: 12px;
             background-color: #007bff; /* Example color */
             color: white;
             border: none;
