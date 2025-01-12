@@ -46,6 +46,32 @@ body {
         padding: 4px 8px; /* Even smaller for mobile */
         font-size: 12px;
         }
+
+        header {
+        padding: 1em 0; /* Reduce padding */
+        }
+
+        header h1 {
+        font-size: 1.8em; /* Smaller text size for header title */
+        }
+
+        header p {
+        font-size: 1em; /* Smaller text size for subtitle */
+        }
+
+        footer {
+        padding: 0.8em 0; /* Adjust footer padding */
+        }
+
+        footer p {
+        font-size: 0.9em; /* Smaller text size for footer text */
+        margin: 0.5em 0; /* Adjust margin around footer text */
+        }
+
+        footer a {
+        font-size: 0.9em; /* Adjust link size in footer */
+        }
+                    
         }
 
         .toggle-buttons button {
