@@ -115,43 +115,27 @@
 <body>
     <header>
         <h1>Customer & Product Analysis using SQL & Power BI</h1>
-        <h2>A project by Somesh Kolluru</h2>
-        <p>In this project, I use SQL & Power BI to answer business questions and derive key insights to build marketing strategies.</p>
+        <h4>Hi. I'm <strong>Somesh Kolluru</strong>, a digital marketing specialist who loves telling stories through data.<br>
+        In this project, I use SQL & Power BI to answer business questions and derive key insights to build marketing strategies.</h4>
     </header>
 
     <main>
         <div class="toggle-buttons">
             <button onclick="toggleContent('project-overview')">Project Overview</button>
-            <button onclick="toggleContent('project-details')">Project Details</button>
             <button onclick="toggleContent('sql-responses')">SQL Responses</button>
             <button onclick="toggleContent('pbi-responses')">PBI Responses</button>
-            <button onclick="toggleContent('insights')">Insights</button>
+            <button onclick="toggleContent('insights')">Data Insights</button>
         </div>
 
         <section id="project-overview" class="content active">
             <h2>Project Overview</h2>
-            <h3><strong>Introduction</strong></h3>
-            <ul>This project aims to uncover actionable insights from business data to optimise operations and improve decision-making.<br>
-                It focuses on three key business questions critical to growth and customer retention.<br></ul>
-
             <h3><strong>Objective</strong></h3>
-            <ul>This project aims to analyse historical business data to derive meaningful insights that help in inventory management, customer segmentation and optimising marketing budgets.<br>
-            Through this project, I want to demonstrate my data analysis and visualisation skills and show how these skills contribute to my marketing background.</ul>
-
-            <h3><strong>Significance</strong></h3>
-            <ul>This project demonstrates how data-driven insights can lead to more informed decisions, improving profitability and operational efficiency.<br></ul>
-                      
-            <h3><strong>About me</strong></h3>
-            <ul>I'm <strong>Somesh Kolluru</strong>, a digital marketing specialist with a love for telling stories through data.<br>
-            </section>
-
-        <section id="project-details" class="content">
-            <h2>Project Details</h2>
+            <ul>Through this project, I want to demonstrate my data analysis and visualisation skills and show how these skills contribute to my marketing background.</ul>
 
             <h3><strong>About the project</strong></h3>
-            <ul>This project explores the sales record database for an automobile manufacturer.<br></ul>
+            <ul>This project aims to uncover actionable insights from the sales record database of an automobile manufacturer to optimise operations and improve decision-making.<br></ul>
             
-            <h3><strong>The given dataset contains eight tables</strong></h3>
+            <h3><strong>The sales database consists of the following tables:</strong></h3>
                 <ul>Customers: customer data<br>
                 Employees: all employee information<br>
                 Offices: sales office information<br>
@@ -161,17 +145,17 @@
                 Products: a list of scale model cars<br>
                 ProductLines: a list of product line categories</ul>
                 
-                <h3><strong>Here's the Entity Relationship Diagram that explains how the fields are related to each other:</strong></h3>
+            <h3><strong>Here's the Entity Relationship Diagram that explains how the fields are related to each other:</strong></h3>
                 <ul><div class="sql-code">
                 <center><img src="Entity_Relationship_Diagram.png" alt="Entity Relationship Diagram" style="width:100%; max-width:1080px; margin: 20px 0;"></center>
             </div></ul>
 
-                <h3>Using this dataset, the management expects answers to the following questions:<br></h3>
+            <h3>Using this dataset, the management expects answers to the following questions critical to growth and customer retention:<br></h3>
                 <ul>Q1: Which products should we order more of or less of?</ul>
                 <ul>Q2: How should we match marketing and communication strategies to customer behaviour?</ul>
                 <ul>Q3: How much can we spend on acquiring new customers?</ul>
                 
-                <h3><strong>These are the tools and languages I used for this project</strong><br></h3>
+            <h3><strong>These are the tools and languages I used for this project:</strong><br></h3>
                  <ul><strong>SQL Queries:</strong> DB Browser for SQLite<br>
                     <strong>Data Visualisation:</strong> Microsoft Power BI Desktop & Power BI Service<br>
                     <strong>Website Design:</strong> GitHub, HTML & CSS<br>
@@ -255,7 +239,7 @@
         </section>
 
         <section id="insights" class="content">
-            <h2>Insights</h2>
+            <h2>Data Insights</h2>
             <ul><strong>Q1: Which products should we order more of or less of?</strong></ul>
             <ul>
                 The low stock ratio and product performance tell us the most in-demand products.<br>
@@ -268,16 +252,18 @@
                 We can determine how to drive loyalty and attract more customers.</ul>
 
         <ul><strong>Q3: How much can we spend on acquiring new customers?</strong></ul>
-            <ul>Customer Lifetime Value tells us how much profit an average customer generates during their lifetime with our store.<br>
+            <ul>Customer Lifetime Value tells us how much profit an average customer generates with our store.<br>
                 We can use it to predict our future profit.<br>
-                So, if we get ten new customers next month, we'll earn 390,395 dollars.<br>
-                Based on this prediction, we can decide how much we can spend on acquiring new customers.</ul>
+                So, according to the average CLV, if we get ten new customers next month, we'll earn 390,395 dollars.<br>
+                However, this may be skewered since two outliers (Diego Freyre & Susan Nelson) outweigh every other customer's CLV.<br>
+                So, we should calculate a reliable metric like an adjusted average or the median.
+                Based on this prediction, we can spend 20-30% of the median CLV on acquiring new customers.</ul>
         </section>
     </main>
 
     <footer>
         <p>Credit: Dataquest | Guided Project: Customers and Products Analysis Using SQL<br>
-        <a href="your-linkedin-profile-url" target="_blank">Let's connect on LinkedIn<br> </a>
+        Let's connect on <a href="your-linkedin-profile-url" target="_blank">LinkedIn<br> </a>
         &copy;2025 Customer & Product Analysis using SQL & Power BI by Somesh Kolluru. All rights reserved.</p>
     </footer>
 </body>
