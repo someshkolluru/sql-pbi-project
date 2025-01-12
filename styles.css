@@ -56,20 +56,6 @@ body {
             background: #0056b3;
         }
 
-        /* Desktop layout (all buttons in one row) */
-        @media (min-width: 601px) {
-        .toggle-buttons {
-        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
-        }
-        }
-
-        /* Mobile layout (split buttons into two rows) */
-        @media (max-width: 600px) {
-        .toggle-buttons button {
-        flex: 1 1 45%; /* Each button takes 45% of the width on small screens */
-        }
-        }
-
         .content {
             display: none;
         }
