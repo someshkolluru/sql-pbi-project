@@ -209,8 +209,8 @@
         <section id="sql-responses" class="content">
             <h2>SQL Responses</h2>
             <p><strong>Q1: Which products should we order more of or less of?</strong></p>
-           <ul>To answer this question using SQL, I:<br>
-                <li>Calculated the products that were almost out of stock (Low Stock Ratio).<br></li>
+           To answer this question using SQL, I:<br>
+               <ul><li>Calculated the products that were almost out of stock (Low Stock Ratio).<br></li>
                     <li>Calculated the products that sold the most (Total Sales).<br></li>
                     <li>Combined the two and listed the products that were the most profitable.<br></li></ul>
             <div class="sql-code">
@@ -219,8 +219,8 @@
             </div>
 
             <p><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</p></strong>
-            <ul>To answer this question using SQL, I:<br>
-              <li>Calculated the total profits brought by each customer.<br></li>
+            To answer this question using SQL, I:<br>
+              <ul><li>Calculated the total profits brought by each customer.<br></li>
                     <li>Listed the top 5 most and least valuable customers.<br></li></ul>
             <div class="sql-code">
                 <img src="SQL_PBI_Project-SQL_Q2_v3.png" alt="Most & Least Valuable Customers" style="width:100%; max-width:1080px; margin: 20px 0;">
@@ -228,8 +228,8 @@
             </div> 
 
             <p><strong>Q3: How much can we spend on acquiring new customers?</p></strong>
-             <ul>To answer this question using SQL, I:<br>
-             <li>Calculated the number of new customers acquired per month and decided to spend money on acquisition.<br></li>
+             To answer this question using SQL, I:<br>
+             <ul><li>Calculated the number of new customers acquired per month and decided to spend money on acquisition.<br></li>
                     <li>Calculated the average customer lifetime value.<br></li></ul>   
             <div class="sql-code">
                   <img src="SQL_PBI_Project-SQL_Q3_v2.png" alt="Average Customer Lifetime Value" style="width:100%; max-width:1080px; margin: 20px 0;">
@@ -242,8 +242,8 @@
             <h2>PBI Responses</h2>
 
             <p><strong>Q1: Which products should we order more of or less of?</strong></p>
-            <ul>To answer this question using Power BI, I:<br>
-            <li>Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br></li>
+            To answer this question using Power BI, I:<br>
+            <ul><li>Merged the 'orders' and the 'products' tables and kept all the relevant columns.<br></li>
                     <li>Created measures for 'Low Stock Ratio' and 'Product Performance' using the previous formulae.<br></li>
                     <li>Used two Stacked Bar Charts in the Report View and added the respective measure to generate the visual.<br></li></ul>
             <div class="visual-container">
@@ -254,8 +254,8 @@
             
             
             <p><strong>Q2: How should we match marketing and communication strategies to customer behaviour?</strong></p>
-            <ul>To answer this question using Power BI, I:<br>
-            <li>Created measures for 'Total Orders' and 'Total Profit' in the 'order details' table.<br></li>
+           To answer this question using Power BI, I:<br>
+             <ul><li>Created measures for 'Total Orders' and 'Total Profit' in the 'order details' table.<br></li>
                     <li>Selected a Scatter Chart and added 'Total Orders' to X-axis and 'Total Profit' to Y-axis.<br></li>
                     <li>Also added fields like 'country', 'customernumber' and 'no. of vehicles ordered' for a more detailed visual.<br></li></ul>
             <div class="visual-container">
@@ -264,8 +264,8 @@
             </div>
 
             <p><strong>Q3: How much can we spend on acquiring new customers?</strong></p>
-            <ul>To answer this question using Power BI, I:<br>
-            <li>Merged the necessary tables and created measures for 'CLV' and 'Average CLV per Customer'.<br></li>
+            To answer this question using Power BI, I:<br>
+            <ul><li>Merged the necessary tables and created measures for 'CLV' and 'Average CLV per Customer'.<br></li>
                     <li>Created CLV bins to categorise customers based on their lifetime value:<br></li>
                        <ul>CLV < 20000 - Low CLV</ul>
                        <ul>CLV >= 20000 and < 50000 - Medium CLV</ul>
@@ -299,7 +299,7 @@
                 We can use it to predict our future profit.<br>
                 So, according to the average CLV, if we get ten new customers next month, we'll earn 390,395 dollars.<br>
                 However, this may be skewered since two outliers (Diego Freyre & Susan Nelson) outweigh every other customer's CLV.<br>
-                So, we should calculate a reliable metric like an adjusted average or the median.
+                So, we should calculate a reliable metric like an adjusted average or the median.<br>
                 Based on this prediction, we can spend 20-30% of the median CLV on acquiring new customers.</ul>
         </section>
     </main>
